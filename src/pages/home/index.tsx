@@ -146,7 +146,7 @@ export function Home() {
              <p className="font-bold mt-1 mb-2 px-2">{car.name}</p>
              <div className="flex flex-col px-2">
                <span className="text-zinc-700 mb-6">Ano {car.year} | {car.km}</span>
-               <strong className="text-black font-medium text-xl">{car.price}</strong>
+               <strong className="text-black font-medium text-xl"> R$ {car.price}</strong>
              </div>
              <div className="w-full h-px bg-slate-200 my-2"></div>
              <div className="px-2 pb-2">
