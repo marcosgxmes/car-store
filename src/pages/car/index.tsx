@@ -98,7 +98,7 @@ export function CarDetail() {
         >
         {car?.images.map( image => (
           <SwiperSlide key={image.name}>
-            <img src={image.url} alt="foto do carro" className='w-full h-96 object-cover' />
+            <img src={image.url} alt="foto do carro" className='w-full h-94 object-cover md: h-90' />
           </SwiperSlide>
 
         )) }
@@ -108,8 +108,8 @@ export function CarDetail() {
       {car && (
         <main className='w-full bg-white rounded-lg p-6 my-4'>
           <div className='flex flex-col sm:flex-row mb-4 items-center justify-between'>
-            <h1 className='font-bold text-3xl text-black '>{car?.name}</h1>
-            <h1 className='font-bold text-3xl text-black '>R$ {car?.price}</h1>
+            <h1 className='font-bold text-3xl text-black'>{car?.name}</h1>
+            <h1 className='font-bold text-3xl text-black'>R$ {car?.price}</h1>
           </div>
 
           <p>{car?.model}</p>
@@ -141,7 +141,7 @@ export function CarDetail() {
            <p>{car?.whatsapp}</p>
 
            <a className='bg-green-500 w-full text-white flex items-center justify-center gap-2 my-6 h-11 text-xl rounded-lg font-medium cursor-pointer' href={`https://api.whatsapp.com/send?phone=${car?.whatsapp}&text=Olá, vi esse ${car?.name} no site WebCarros e fiquei interessado!`} target='_blank'>
-            Enviar mensagem para o vendedor
+            Falar com o vendedor
             <FaWhatsapp size={26} color='#fff' />
            </a>
         </main>

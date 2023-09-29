@@ -109,7 +109,7 @@ export function Home() {
       <section className="bg-white p-4 rounded-lg w-full max-w-3xl mx-auto flex items-center justify-center gap-2">
         <input
           type="text"
-          placeholder="Digite o nome do carro..."
+          placeholder="Pesquisar..."
           className="w-full border-2 rounded-lg h-9 px-3 outline-none"
           value={input}
           onChange={ (e) => setInput(e.target.value)}
@@ -127,7 +127,7 @@ export function Home() {
         Carros usados, seminovos e novos em todo Brasil
       </h1>
 
-      <main className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 ">
+      <main className="grid grid-cols-1 gap-6 mb-4 md:grid-cols-2 lg:grid-cols-3 ">
        
         {cars.map( car => (
           <Link key={car.id} to={`/car/${car.id}`}>
